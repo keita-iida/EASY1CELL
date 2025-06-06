@@ -1,0 +1,232 @@
+﻿<html>
+
+<!-- ------------------------------------------------------------------ -->
+<!-- head                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<head>
+  <title>Bioinformatics Training in Imperial College London</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="stylesheet" type="text/css" href="style_03_03.css">
+  <style>
+    h3 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+    .step {
+      margin-bottom: 2em;
+    }
+    .note {
+      background: #f8f8f8;
+      padding: 1em;
+      border-left: 4px solid #aaa;
+    }
+  </style>
+</head>
+<!-- ------------------------------------------------------------------ -->
+<!-- body                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<body link="blue" alink="red" vlink="blue">
+  <!-- ---------------------------------------------------------------- -->
+  <!-- wrap_all                                                         -->
+  <!-- ---------------------------------------------------------------- -->
+  <div class="wrap_all">
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_header                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_header">
+      <div class="box_header">
+        <div class="char_tiny" style="float:right">student_0270</div>
+        <div class="char_subtitle">
+          Your state: Second-year
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_left                                                      -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_left">
+      <div class="wrap_left_top"><div class="figure_left"><center>
+        <img src="images/student_02b.jpg" width="150px" height="150px" border="0">
+      </center></div></div>
+      <div class="cb"></div>
+      <div class="wrap_left_bottom"><div class="box_left">
+        <div class="char_small" style="padding-top: 20px">
+          Student: Welcome welcome.
+        </div>
+      </div></div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_right                                                     -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_right">
+      <div class="box_right"><div class="char_small">
+        <p><span class="char_tinysmall">Figures were modified from
+          <a href="https://pubmed.ncbi.nlm.nih.gov/26000488/" target="_blank" rel="noopener noreferrer">
+            Macosko et al., Cell, 2015
+          </a> for educational purposes.
+        </span></p>
+
+        <div class="step">
+          <h3>Step 1: Cell and Bead Encapsulation</h3>
+          <p class="char_tinysmall">
+            Single cells and barcoded microparticles (beads) are encapsulated into aqueous droplets.
+            Each droplet contains one cell and one bead, along with a lysis buffer that immediately lyses the cell and releases RNA.
+          </p>
+
+          <div style="padding-top:10px; padding-bottom:10px">
+            <img src="images/study_002_02.png" width="500px" height="150px" border="1"
+             style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>Step 2: RNA Capture via Bead-bound polyT</h3>
+          <p class="char_tinysmall">
+            Each bead is coated with many oligoDNA primers containing a polyT sequence, which hybridizes to the polyA tail of RNA molecules.
+            Although the term "mRNA" is often used, nascent (unspliced) RNA with polyA tails may also be captured, which can be used for estimating transcription dynamics
+            (<a href="https://pubmed.ncbi.nlm.nih.gov/30089906/" target="_blank" rel="noopener noreferrer">
+              velocyto
+            </a>).
+          </p>
+
+          <div style="padding-top:10px; padding-bottom:10px">
+            <img src="images/study_002_03.png" width="600px" height="90px" border="1"
+             style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+
+          <p class="char_tinysmall">Each oligoDNA primer on the bead contains the following structure:</p>
+          <pre class="char_tinysmall">5' - PCR handle - Cell Barcode (12 bp) - UMI (8 bp) - polyT (T27) - 3'</pre>
+          <p class="char_tinysmall">where
+            <li class="char_tinysmall" style="margin-bottom: 0.2em;">
+              <strong>Cell Barcode</strong>: Unique to each bead, used to identify cells.
+            </li>
+            <li class="char_tinysmall" style="margin-bottom: 0.2em;">
+              <strong>UMI</strong>: Unique Molecular Identifier to correct for PCR amplification bias.
+            </li>
+            <li class="char_tinysmall">
+              <strong>polyT (T27)</strong>: Captures RNA via hybridization to the polyA tail.
+            </li>
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>Step 3: Reverse Transcription (RT)</h3>
+          <p class="char_tinysmall">
+            The captured RNA is reverse transcribed into cDNA using the bead-bound oligo as a primer.
+            This generates cDNA that is partially hybridized with the original primer.
+          </p>
+
+          <div style="padding-top:10px; padding-bottom:10px">
+            <img src="images/study_002_04.png" width="450px" height="90px" border="1"
+             style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>Step 4: cDNA Fragmentation and Adapter Ligation</h3>
+          <p class="char_tinysmall">
+            Full-length cDNAs are fragmented into smaller pieces, and sequencing adapters are ligated to both ends.
+            Importantly, only fragments containing the 5' portion of the original primer (Cell Barcode + UMI etc.) are retained after selection steps, which leads to <strong>3' bias</strong>.
+          </p>
+
+          <div style="padding-top:10px; padding-bottom:10px">
+            <img src="images/study_002_05.png" width="420px" height="210px" border="1"
+             style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>Step 5: Bridge PCR and Library Preparation</h3>
+          <p class="char_tinysmall">
+            The adapter-ligated cDNA fragments are amplified via <strong>bridge PCR</strong>, enabling paired-end sequencing. In this context:
+          </p>
+          <ul>
+            <li class="char_tinysmall" style="margin-bottom: 0.2em;">
+              <strong>Forward read R1</strong>: Contains Cell Barcode, UMI, and optionally polyT.
+            </li>
+            <li class="char_tinysmall" style="margin-bottom: 0.2em;">
+              <strong>Reverse read R2</strong>: Captures the transcript sequence and may include polyA.
+            </li>
+          </ul>
+          <p class="char_tinysmall">
+            Note: Illumina sequencers always read from 5' to 3', so forward reads start at the barcode end, while reverse reads may reach the polyA tail depending on fragment length.
+            In the following example, the reverse read from fragment 2 may reache the polyA.
+            Do you know the reason why?
+          </p>
+
+          <div style="padding-top:10px; padding-bottom:10px">
+            <img src="images/study_002_06.png" width="450px" height="150px" border="1"
+             style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>Step 6: Paired-End Sequencing Output</h3>
+          <p class="char_tinysmall">
+            Now you have better understanding for the FASTQ files.
+            <ul>
+              <li class="char_tinysmall" style="margin-bottom: 0.2em;">
+                <code>test_R1.fastq</code>: Forward reads (Cell Barcode + UMI [+ polyT])
+              </li>
+              <li class="char_tinysmall" style="margin-bottom: 0em;">
+                <code>test_R2.fastq</code>: Reverse reads (transcript-derived cDNA [+ polyA])
+              </li>
+            </ul>
+          </p>
+
+          <div style="padding-top:10px; padding-bottom:0px">
+            <img src="images/study_002_07.png" width="600px" height="160px" border="1"
+             style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+
+        <div style="padding-top: 0px; text-align: center;">
+          <div class="char_normal">
+            <a href="student_0260.html" style="margin-right: 50px;">Back</a>
+            <a href="student_0280.html">Next</a>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_footer                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_footer">
+      <div class="box_footer"><div class="char_small">
+        Any questions are welcome.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- JavaScript: for speech bubble                                    -->
+  <!-- ---------------------------------------------------------------- -->
+  <script>
+    const clickedAreas = new Map();
+
+    function handleClick(message, link, element) {
+      const tooltip = document.getElementById("tooltip");
+      const rect = element.getBoundingClientRect();
+      const container = element.offsetParent;
+
+      const left = element.offsetLeft;
+      const top = element.offsetTop - 40;  // Move speech bubbles a bit upward.
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+      tooltip.innerHTML = message;
+      tooltip.style.display = "block";
+
+      setTimeout(() => {
+        tooltip.style.display = "none";
+      }, 3000);
+    }
+  </script>
+
+</body>
+

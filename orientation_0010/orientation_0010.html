@@ -1,0 +1,170 @@
+﻿<html>
+
+<!-- ------------------------------------------------------------------ -->
+<!-- head                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<head>
+  <title>Bioinformatics Training in Imperial College London</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="stylesheet" type="text/css" href="style_02.css">
+  <style>
+    .image-container {
+      position: relative;
+      width: 560px;
+      height: 560px;
+      margin: 0 auto;
+    }
+
+    .click-area {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: #ffffcc;
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+      border-radius: 10px;
+      display: none;
+      white-space: nowrap;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      z-index: 10;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<!-- ------------------------------------------------------------------ -->
+<!-- body                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<body link="blue" alink="red" vlink="blue">
+  <!-- ---------------------------------------------------------------- -->
+  <!-- wrap_all                                                         -->
+  <!-- ---------------------------------------------------------------- -->
+  <div class="wrap_all">
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_header                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_header">
+      <div class="box_header">
+        <div class="char_tiny" style="float:right">orientation_0010</div>
+        <div class="char_subtitle">
+          Your state: Visitor
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_left                                                      -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_left">
+      <div class="wrap_left_top"><div class="figure_left"><center>
+        <img src="images/gatekeeper.png" width="150px" height="170px" border="0">
+      </center></div></div>
+      <div class="cb"></div>
+      <div class="wrap_left_bottom"><div class="box_left">
+        <div class="char_small" style="padding-top: 20px">
+          Guard: Enter building 0.<br><br>
+          <a href="../opening_0010/envsetting_0070.html">Back</a>
+        </div>
+      </div></div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_right                                                     -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_right">
+      <div class="box_right">
+        <div class="image-container">
+          <img src="images/map_01.jpg" alt="" usemap="#image-map" width="600px" height="550px">
+          <map name="image-map">
+<!--            <area alt="entrance" title="entrance" href="orientation_0020.html" -->
+<!--              coords="405,465,530,525" shape="rect"> -->
+            <area title="Entrance" href="orientation_0020.html"
+              coords="210,440,375,525" shape="rect">
+<!--            <area alt="closed_01" title="entrance" href="closed_0010.html" -->
+<!--              coords="390,350,510,435" shape="rect"> -->
+<!--            <area alt="closed_02" title="entrance" href="closed_0020.html" -->
+<!--              coords="370,200,540,285" shape="rect"> -->
+<!--            <area alt="closed_03" title="entrance" href="closed_0030.html" -->
+<!--              coords="70,130,215,280" shape="rect"> -->
+<!--            <area alt="vending" title="vending" href="vending_0010.html" -->
+<!--              coords="315,220,340,250" shape="rect"> -->
+<!--            <area alt="cave" title="cave" href="cave_0010.html" -->
+<!--              coords="310,50,370,100" shape="rect"> -->
+<!--            <area alt="thief" title="thief" href="thief_0010.html" -->
+<!--              coords="505,155,525,180" shape="rect"> -->
+          </map>
+
+          <div id="tooltip" class="tooltip"></div>
+
+          <div class="click-area" style="top:465px; left:405px; width:125px; height:60px;"
+            onclick="handleClick('THE UNIVERSITY<br>OF<br>SINGLE CELL<br>TRANSCRIPTOMICS', this)">
+          </div>
+
+          <div class="click-area" style="top:350px; left:390px; width:120px; height:85px;"
+            onclick="handleClick('Building 1 is closed.', this)">
+          </div>
+
+          <div class="click-area" style="top:200px; left:370px; width:170px; height:85px;"
+            onclick="handleClick('Building 2 is closed.', this)">
+          </div>
+
+          <div class="click-area" style="top:130px; left:70px; width:145px; height:150px;"
+            onclick="handleClick('Building 3 is closed.', this)">
+          </div>
+
+          <div class="click-area" style="top:220px; left:315px; width:25px; height:30px;"
+            onclick="handleClick('This is a vending machine.<br>Drinks available.', this)">
+          </div>
+
+          <div class="click-area" style="top:50px; left:310px; width:60px; height:50px;"
+            onclick="handleClick('Going out is prohibited.', this)">
+          </div>
+
+          <div class="click-area" style="top:155px; left:505px; width:20px; height:25px;"
+            onclick="handleClick('...', this)">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_footer                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_footer">
+      <div class="box_footer"><div class="char_small">
+        Any questions are welcome.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- JavaScript: for speech bubble                                    -->
+  <!-- ---------------------------------------------------------------- -->
+  <script>
+    const clickedAreas = new Map();
+
+    function handleClick(message, element) {
+      const tooltip = document.getElementById("tooltip");
+      const rect = element.getBoundingClientRect();
+      const container = element.offsetParent;
+
+      const left = element.offsetLeft;
+      const top = element.offsetTop - 40;
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+      tooltip.innerHTML = message;
+      tooltip.style.display = "block";
+
+      setTimeout(() => {
+        tooltip.style.display = "none";
+      }, 3000);
+    }
+  </script>
+
+</body>
+

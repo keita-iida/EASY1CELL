@@ -1,0 +1,150 @@
+﻿<html>
+
+<!-- ------------------------------------------------------------------ -->
+<!-- head                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<head>
+  <title>Bioinformatics Training in Imperial College London</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="stylesheet" type="text/css" href="style_03_02.css">
+  <style>
+    h3 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+    .step {
+      margin-bottom: 2em;
+    }
+    .note {
+      background: #f8f8f8;
+      padding: 1em;
+      border-left: 4px solid #aaa;
+    }
+  </style>
+</head>
+<!-- ------------------------------------------------------------------ -->
+<!-- body                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<body link="blue" alink="red" vlink="blue">
+  <!-- ---------------------------------------------------------------- -->
+  <!-- wrap_all                                                         -->
+  <!-- ---------------------------------------------------------------- -->
+  <div class="wrap_all">
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_header                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_header">
+      <div class="box_header">
+        <div class="char_tiny" style="float:right">student_0280</div>
+        <div class="char_subtitle">
+          Your state: Second-year
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_left                                                      -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_left">
+      <div class="wrap_left_top"><div class="figure_left"><center>
+        <img src="images/student_02b.jpg" width="150px" height="150px" border="0">
+      </center></div></div>
+      <div class="cb"></div>
+      <div class="wrap_left_bottom"><div class="box_left">
+        <div class="char_small" style="padding-top: 20px">
+          Student: Welcome welcome.
+        </div>
+      </div></div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_right                                                     -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_right">
+      <div class="box_right"><div class="char_small">
+        <p>
+          To support this hands-on tutorial, I’ve prepared a small toolset that virtually generates minimal raw scRNA-seq data.
+        </p>
+
+        <p>
+          You’ll find it in the file MiniDrop.zip, which I’m pleased to offer as a gift for participants of this tutorial.
+          It’s designed to help you learn by simulating the Drop-seq process from start to finish.
+          <ul>
+            <li>
+              <a href="data/MiniDrop.zip" target="_blank" rel="noopener noreferrer">
+                MiniDrop.zip
+              </a>
+            </li>
+          </ul>
+        </p>
+
+        <div class="step" style="padding-top: 1px;">
+          <h3>Required tools</h3>
+          <p class="char_tinysmall">
+            To run MiniDrop, you’ll need a Linux or Linux-like environment with the following tools installed (unfortunately, MacOS didn't work in my pretest, which is underconstruction):
+            <ul>
+              <li style="margin-bottom: 0.2em;" class="char_tinysmall">
+                samtools
+              </li>
+              <li style="margin-bottom: 0.2em;" class="char_tinysmall">
+                Picard
+              </li>
+              <li style="margin-bottom: 0.2em;" class="char_tinysmall">
+                Dropseq Tools
+              </li>
+              <li style="margin-bottom: 0em;" class="char_tinysmall">
+                STAR
+              </li>
+            </ul>
+            <span class="char_tinysmall">We recommend using <strong>Conda</strong> to manage installation and dependencies easily.</span>
+          </p>
+        </div>
+
+        <div style="padding-top: 0px; text-align: center;">
+          <div class="char_normal">
+            <a href="student_0270.html" style="margin-right: 50px;">Back</a>
+            <a href="student_0290.html">Hands-on Tutorial</a>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_footer                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_footer">
+      <div class="box_footer"><div class="char_small">
+        Any questions are welcome.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- JavaScript: for speech bubble                                    -->
+  <!-- ---------------------------------------------------------------- -->
+  <script>
+    const clickedAreas = new Map();
+
+    function handleClick(message, link, element) {
+      const tooltip = document.getElementById("tooltip");
+      const rect = element.getBoundingClientRect();
+      const container = element.offsetParent;
+
+      const left = element.offsetLeft;
+      const top = element.offsetTop - 40;  // Move speech bubbles a bit upward.
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+      tooltip.innerHTML = message;
+      tooltip.style.display = "block";
+
+      setTimeout(() => {
+        tooltip.style.display = "none";
+      }, 3000);
+    }
+  </script>
+
+</body>
+

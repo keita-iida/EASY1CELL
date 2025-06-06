@@ -1,0 +1,120 @@
+﻿<html>
+
+<!-- ------------------------------------------------------------------ -->
+<!-- head                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<head>
+  <title>Bioinformatics Training in Imperial College London</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="stylesheet" type="text/css" href="style_03_02.css">
+  <style>
+    h3 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+    .step {
+      margin-bottom: 2em;
+    }
+    .note {
+      background: #f8f8f8;
+      padding: 1em;
+      border-left: 4px solid #aaa;
+    }
+  </style>
+</head>
+<!-- ------------------------------------------------------------------ -->
+<!-- body                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<body link="blue" alink="red" vlink="blue">
+  <!-- ---------------------------------------------------------------- -->
+  <!-- wrap_all                                                         -->
+  <!-- ---------------------------------------------------------------- -->
+  <div class="wrap_all">
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_header                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_header">
+      <div class="box_header">
+        <div class="char_tiny" style="float:right">student_0295</div>
+        <div class="char_subtitle">
+          Your state: Second-year
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_left                                                      -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_left">
+      <div class="wrap_left_top"><div class="figure_left"><center>
+        <img src="images/student_02b.jpg" width="150px" height="150px" border="0">
+      </center></div></div>
+      <div class="cb"></div>
+      <div class="wrap_left_bottom"><div class="box_left">
+        <div class="char_small" style="padding-top: 20px">
+          Student: Welcome welcome.
+        </div>
+      </div></div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_right                                                     -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_right">
+      <div class="box_right"><div class="char_small">
+        <p>
+          Well done!
+        </p>
+
+        <p>
+          Now you're ready to be a third-year student.
+        </p>
+
+        <div style="padding-top: 0px; text-align: center;">
+          <div class="char_normal">
+            <a href="student_0290.html" style="margin-right: 50px;">Back</a>
+            <a href="../student_0030/student_0310.html">Next</a>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_footer                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_footer">
+      <div class="box_footer"><div class="char_small">
+        Any questions are welcome.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- JavaScript: for speech bubble                                    -->
+  <!-- ---------------------------------------------------------------- -->
+  <script>
+    const clickedAreas = new Map();
+
+    function handleClick(message, link, element) {
+      const tooltip = document.getElementById("tooltip");
+      const rect = element.getBoundingClientRect();
+      const container = element.offsetParent;
+
+      const left = element.offsetLeft;
+      const top = element.offsetTop - 40;  // Move speech bubbles a bit upward.
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+      tooltip.innerHTML = message;
+      tooltip.style.display = "block";
+
+      setTimeout(() => {
+        tooltip.style.display = "none";
+      }, 3000);
+    }
+  </script>
+
+</body>
+

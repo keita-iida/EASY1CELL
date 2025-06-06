@@ -1,6 +1,8 @@
 # EASY1CELL
 
-**EASY1CELL** was developed for a lecture at Imperial College London.
+EASY1CELL was developed for a lecture at Imperial College London.
+This is still an alpha version, but we hope you enjoy it!
 
-This is still an alpha version, but we hope you enjoy it!  
-👉 [Enter](https://keita-iida.github.io/EASY1CELLOMICS/)
+Click the following logo to get started.<br><br>
+
+[<img src="image/EASY1CELL.png" width="500px">](https://keita-iida.github.io/EASY1CELL/)

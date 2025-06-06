@@ -1,0 +1,135 @@
+﻿<html>
+
+<!-- ------------------------------------------------------------------ -->
+<!-- head                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<head>
+  <title>Bioinformatics Training in Imperial College London</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="stylesheet" type="text/css" href="style_03.css">
+  <style>
+    .image-container {
+      position: relative;
+      width: 560px;
+      height: 560px;
+      margin: 0 auto;
+    }
+
+    .click-area {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: #ffffcc;
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+      border-radius: 10px;
+      display: none;
+      white-space: nowrap;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      z-index: 10;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<!-- ------------------------------------------------------------------ -->
+<!-- body                                                               -->
+<!-- ------------------------------------------------------------------ -->
+<body link="blue" alink="red" vlink="blue">
+  <!-- ---------------------------------------------------------------- -->
+  <!-- wrap_all                                                         -->
+  <!-- ---------------------------------------------------------------- -->
+  <div class="wrap_all">
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_header                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_header">
+      <div class="box_header">
+        <div class="char_tiny" style="float:right">student_0030</div>
+        <div class="char_subtitle">
+          Your state: First-year
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_left                                                      -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_left">
+      <div class="wrap_left_top"><div class="figure_left"><center>
+        <img src="images/student_01b.jpg" width="150px" height="150px" border="0">
+      </center></div></div>
+      <div class="cb"></div>
+      <div class="wrap_left_bottom"><div class="box_left">
+        <div class="char_small" style="padding-top: 20px">
+          Student: Hello again.
+        </div>
+      </div></div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_right                                                     -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_right">
+      <div class="box_right"><div class="char_small">
+        <p>
+          Before starting the tutorial, let's have a glance at "pbmc_counts.txt," which is called a read count table.
+          <ul>
+            <li>
+              <a href="data/pbmc_counts.txt" target="_blank" rel="noopener noreferrer">
+                pbmc_counts.txt
+              </a>
+            </li>
+          </ul>
+        </p>
+
+        <div style="padding-top: 10px; text-align: center;">
+          <div class="char_normal">
+            <a href="student_0020.html" style="margin-right: 50px;">Back</a>
+            <a href="student_0040.html">Next</a>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+    <div class="cb"></div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- wrap_footer                                                    -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="wrap_footer">
+      <div class="box_footer"><div class="char_small">
+        Any questions are welcome.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- JavaScript: for speech bubble                                    -->
+  <!-- ---------------------------------------------------------------- -->
+  <script>
+    const clickedAreas = new Map();
+
+    function handleClick(message, link, element) {
+      const tooltip = document.getElementById("tooltip");
+      const rect = element.getBoundingClientRect();
+      const container = element.offsetParent;
+
+      const left = element.offsetLeft;
+      const top = element.offsetTop - 40;  // Move speech bubbles a bit upward.
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+      tooltip.innerHTML = message;
+      tooltip.style.display = "block";
+
+      setTimeout(() => {
+        tooltip.style.display = "none";
+      }, 3000);
+    }
+  </script>
+
+</body>
+
