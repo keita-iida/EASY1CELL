@@ -2186,8 +2186,8 @@ velocity analysis</a>.</p>
 </center>
 <p><br></p>
 </div>
-<div id="counting-only-exonic-reads" class="section level4 unnumbered">
-<h4 class="unnumbered">(2) Counting only exonic reads</h4>
+<div id="bias" class="section level4 unnumbered">
+<h4 class="unnumbered">(2) 3’ bias</h4>
 <p>In the Drop-seq protocol, only fragments containing the 5′ portion of
 the original primer (i.e., Cell Barcode and UMI) are retained after
 selection, which introduces a strong 3′ bias.</p>
@@ -2201,7 +2201,7 @@ quantified?<br> Moreover, how might it influence downstream analyses,
 such as RNA velocity?</p>
 <p><br></p>
 </div>
-<div id="counting-only-exonic-reads-1" class="section level4 unnumbered">
+<div id="counting-only-exonic-reads" class="section level4 unnumbered">
 <h4 class="unnumbered">(3) Counting only exonic reads</h4>
 <p>The script <code>pg_008_01_counts.sh</code> includes only exonic
 reads in the gene-by-cell count matrix. This design decision ensures
