@@ -2243,33 +2243,6 @@ legend(&quot;topright&quot;, legend = donor_levels, col = donor_colours, pch = 1
 <p>In the current PCA plot, we do not observe any clear clustering by
 donor. This suggests that there is no strong batch effect in this
 dataset, at least based on the donor information.</p>
-<p><br></p>
-<p><strong>Note1: What is Data Integration?</strong><br> When working
-with scRNA-seq or bulk RNA-seq data from multiple experiments or donors,
-we often need to combine datasets.<br> However, this can introduce
-<strong>batch effects</strong> — technical differences that distort
-biological comparisons.</p>
-<p>To reduce these effects while merging datasets, we use a process
-called data <strong>integration</strong>.<br> In recent years, many
-integration methods have been developed around the world for both bulk
-and single-cell RNA-seq.</p>
-<p>In single-cell analysis, an R package called <strong>Harmony</strong>
-has become especially popular (<a href="https://www.nature.com/articles/s41592-019-0619-0">Korsunsky et
-al., Nature Methods, 2019</a>).<br> It is widely used because it runs
-quickly and uses less memory compared to other methods.</p>
-<p><br></p>
-<p><strong>Note2: Experimental methods to reduce batch
-effects</strong><br> Besides computational methods, there are also
-experimental strategies to reduce batch effects.<br> One such method is
-called <strong>multiplexing</strong>.</p>
-<p>In multiplexing, cells from different batches are labelled with
-unique barcodes, and then mixed together before sequencing.<br> After
-sequencing, the data can be separated back into batches using these
-barcodes — a process called <strong>demultiplexing</strong>.</p>
-<p>In fact, the sepsis dataset used in this tutorial was generated using
-a multiplexing strategy. This is likely why we observe very little batch
-effect in the donor-level PCA plot.</p>
-<p><br></p>
 <p>Similarly, check the group labels (i.e., Control, Infection,
 Sepsis_moderate, and Sepsis_severe).</p>
 <pre class="r"><code># Reorder meta data to match the PCA cell order.
@@ -2302,6 +2275,32 @@ side of the plot.</p>
 <p>This may suggest that the cluster on the right contains cells with
 inflammatory characteristics, and that these cells are more common in
 sepsis samples.</p>
+<p><br></p>
+<p><strong>Note1: Computational methods to reduce batch
+effects</strong><br> When working with scRNA-seq or bulk RNA-seq data
+from multiple experiments or donors, we often need to combine
+datasets.<br> However, this can introduce <strong>batch effects</strong>
+— technical differences that distort biological comparisons.</p>
+<p>To reduce these effects while merging datasets, we use a process
+called <strong>data integration</strong>.<br> In recent years, many
+integration methods have been developed around the world for both bulk
+and single-cell RNA-seq.</p>
+<p>In single-cell analysis, an R package called <strong>Harmony</strong>
+has become especially popular (<a href="https://www.nature.com/articles/s41592-019-0619-0">Korsunsky et
+al., Nature Methods, 2019</a>).<br> It is widely used because it runs
+quickly and uses less memory compared to other methods.</p>
+<p><br></p>
+<p><strong>Note2: Experimental methods to reduce batch
+effects</strong><br> Besides computational methods, there are also
+experimental strategies to reduce batch effects.<br> One such method is
+called <strong>multiplexing</strong>.</p>
+<p>In multiplexing, cells from different batches are labelled with
+unique barcodes, and then mixed together before sequencing.<br> After
+sequencing, the data can be separated back into batches using these
+barcodes — a process called <strong>demultiplexing</strong>.</p>
+<p>In fact, the sepsis dataset used in this tutorial was generated using
+a multiplexing strategy. This is likely why we observe very little batch
+effect in the donor-level PCA plot.</p>
 <p><br></p>
 </div>
 <div id="save-point-3" class="section level2" number="7.3">
