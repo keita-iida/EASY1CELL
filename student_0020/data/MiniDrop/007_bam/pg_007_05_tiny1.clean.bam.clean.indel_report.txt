@@ -1,0 +1,1 @@
+intended_sequence	related_sequences	num_related	deleted_base	deleted_base_pos	non_incorporated_rate	intended_UMIs	related_median_UMIs	intended_TBias	related_median_TBias

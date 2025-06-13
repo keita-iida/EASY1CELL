@@ -1,0 +1,19 @@
+### /home/keita/miniconda3/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 1   --genomeDir 001_data/001_reference/STAR_index_myc   --genomeFastaFiles 001_data/001_reference/myc.fa      --genomeSAindexNbases 10   --sjdbGTFfile 001_data/001_reference/myc.gtf   --sjdbOverhang 50
+### GstrandBit 32
+versionGenome	2.7.4a
+genomeType	Full
+genomeFastaFiles	001_data/001_reference/myc.fa 
+genomeSAindexNbases	10
+genomeChrBinNbits	18
+genomeSAsparseD	1
+genomeTransformType	None
+genomeTransformVCF	-
+sjdbOverhang	50
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	001_data/001_reference/myc.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	263356 72768

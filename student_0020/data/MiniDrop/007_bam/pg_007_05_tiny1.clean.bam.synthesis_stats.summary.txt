@@ -1,0 +1,6 @@
+
+## METRICS CLASS	org.broadinstitute.dropseqrna.beadsynthesis.BeadSynthesisErrorsSummaryMetric
+NUM_BEADS	NO_ERROR	SYNTHESIS_MISSING_BASE	SINGLE_UMI_ERROR	PRIMER_MATCH	FIXED_FIRST_BASE	OTHER_ERROR_COUNT
+0	0	0	0	0	0	0
+
+

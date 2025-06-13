@@ -1,0 +1,9 @@
+
+## METRICS CLASS	org.broadinstitute.dropseqrna.readtrimming.PolyATrimmer$TrimMetric
+mean	stdev
+44	?
+
+## HISTOGRAM	java.lang.Integer
+BIN	VALUE
+44	1
+

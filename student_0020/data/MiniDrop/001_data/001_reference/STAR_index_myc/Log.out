@@ -1,0 +1,79 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2024-11-25T09:14:51+0000 :/opt/conda/conda-bld/star_1732525954305/work/source
+##### Command Line:
+/home/keita/miniconda3/bin/STAR-avx2 --runThreadN 1 --runMode genomeGenerate --genomeDir 001_data/001_reference/STAR_index_myc --genomeFastaFiles 001_data/001_reference/myc.fa --sjdbGTFfile 001_data/001_reference/myc.gtf --sjdbOverhang 50 --genomeSAindexNbases 10
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    1     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     001_data/001_reference/STAR_index_myc     ~RE-DEFINED
+genomeFastaFiles              001_data/001_reference/myc.fa        ~RE-DEFINED
+sjdbGTFfile                   001_data/001_reference/myc.gtf     ~RE-DEFINED
+sjdbOverhang                  50     ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        1
+genomeDir                         001_data/001_reference/STAR_index_myc
+genomeFastaFiles                  001_data/001_reference/myc.fa   
+genomeSAindexNbases               10
+sjdbGTFfile                       001_data/001_reference/myc.gtf
+sjdbOverhang                      50
+
+-------------------------------
+##### Final effective command line:
+/home/keita/miniconda3/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 1   --genomeDir 001_data/001_reference/STAR_index_myc   --genomeFastaFiles 001_data/001_reference/myc.fa      --genomeSAindexNbases 10   --sjdbGTFfile 001_data/001_reference/myc.gtf   --sjdbOverhang 50
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory created: 001_data/001_reference/STAR_index_myc/
+Jun 05 02:37:02 ... starting to generate Genome files
+001_data/001_reference/myc.fa : chr # 0  "8" chrStart: 0
+Chromosome sequence lengths: 
+8	7620
+Genome sequence total length = 7620
+Genome size with padding = 262144
+Jun 05 02:37:02 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=001_data/001_reference/myc.gtf, found:
+		15 transcripts
+		38 exons (non-collapsed)
+		12 collapsed junctions
+Total junctions: 12
+Jun 05 02:37:02 ..... finished GTF processing
+
+!!!!! WARNING: --genomeSAindexNbases 10 is too large for the genome size=7620, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 5
+Estimated genome size with padding and SJs: total=genome+SJ=101262144 = 262144 + 101000000
+GstrandBit=32
+Number of SA indices: 15240
+Jun 05 02:37:02 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 1;   chunks size limit: 18599685304 bytes
+Jun 05 02:37:02 ... sorting Suffix Array chunks and saving them to disk...
+Writing 121920 bytes into 001_data/001_reference/STAR_index_myc//SA_0 ; empty space on disk = 685936857088 bytes ... done
+Jun 05 02:37:02 ... loading chunks from disk, packing SA...
+Jun 05 02:37:02 ... finished generating suffix array
+Jun 05 02:37:02 ... generating Suffix Array index
+Jun 05 02:37:02 ... completed Suffix Array index
+Jun 05 02:37:02   Finished preparing junctions
+Jun 05 02:37:02 ..... inserting junctions into the genome indices
+Jun 05 02:37:02   Finished SA search: number of new junctions=12, old junctions=0
+Jun 05 02:37:02   Finished sorting SA indicesL nInd=2400
+Genome size with junctions=263356  262144   1212
+GstrandBit1=32   GstrandBit=32
+Jun 05 02:37:02   Finished inserting junction indices
+Jun 05 02:37:02   Finished SAi
+Jun 05 02:37:02 ..... finished inserting junctions into genome
+Jun 05 02:37:02 ... writing Genome to disk ...
+Writing 263356 bytes into 001_data/001_reference/STAR_index_myc//Genome ; empty space on disk = 685936844800 bytes ... done
+SA size in bytes: 72768
+Jun 05 02:37:02 ... writing Suffix Array to disk ...
+Writing 72768 bytes into 001_data/001_reference/STAR_index_myc//SA ; empty space on disk = 685936574464 bytes ... done
+Jun 05 02:37:02 ... writing SAindex to disk
+Writing 8 bytes into 001_data/001_reference/STAR_index_myc//SAindex ; empty space on disk = 685936500736 bytes ... done
+Writing 88 bytes into 001_data/001_reference/STAR_index_myc//SAindex ; empty space on disk = 685936500736 bytes ... done
+Writing 6116691 bytes into 001_data/001_reference/STAR_index_myc//SAindex ; empty space on disk = 685936500736 bytes ... done
+Jun 05 02:37:02 ..... finished successfully
+DONE: Genome generation, EXITING
