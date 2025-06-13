@@ -1757,7 +1757,7 @@ BAM file.</p>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>005_bam/pg_005_02_tiny1.cb.bam</code></li>
-<li><a href="data/MiniDrop/005_bam/pg_005_02_tiny1.cb.bam.sam"><code>005_bam/pg_005_02_tiny1.cb.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/005_bam/pg_005_02_tiny1.cb.bam.sam.txt"><code>005_bam/pg_005_02_tiny1.cb.bam.sam</code></a></li>
 </ul>
 <p>The resulting <code>.bam</code> and <code>.sam</code> files are
 nearly identical to the previous ones, but with an important
@@ -1796,7 +1796,7 @@ sequence.</p>
 <ul>
 <li><code>005_bam/pg_005_03_tiny1.cb.umi.bam</code><br />
 </li>
-<li><a href="data/MiniDrop/005_bam/pg_005_03_tiny1.cb.umi.bam.sam"><code>005_bam/pg_005_03_tiny1.cb.umi.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/005_bam/pg_005_03_tiny1.cb.umi.bam.sam.txt"><code>005_bam/pg_005_03_tiny1.cb.umi.bam.sam</code></a></li>
 </ul>
 <p><strong>Example with UMI Tags</strong> (modified)</p>
 <pre class="text"><code>TEST.1  4  *  0  0  *  *  0  0  GAA... III... XC:Z:AATACAACGGTA  RG:Z:A XM:Z:GGAGCAAA
@@ -1820,7 +1820,7 @@ Renaming is possible, but not recommended.</p>
 <p><strong>Bash code</strong></p>
 <pre class="bash"><code>bash pg_005_04_read_qc.sh</code></pre>
 <p><strong>Output files:</strong> *
-<code>005_bam/pg_005_04_tiny1.cb.umi.qc.bam</code> * <a href="data/MiniDrop/005_bam/pg_005_04_tiny1.cb.umi.qc.bam.sam"><code>005_bam/pg_005_04_tiny1.cb.umi.qc.bam.sam</code></a></p>
+<code>005_bam/pg_005_04_tiny1.cb.umi.qc.bam</code> * <a href="data/MiniDrop/005_bam/pg_005_04_tiny1.cb.umi.qc.bam.sam.txt"><code>005_bam/pg_005_04_tiny1.cb.umi.qc.bam.sam</code></a></p>
 <p>In this example, the input reads are high-quality, so the output is
 unchanged.</p>
 <p><strong>Practice Tip:</strong> Try simulating FASTQ files with
@@ -1839,7 +1839,7 @@ reads (5’).</p>
 <ul>
 <li><code>005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam</code></li>
 <li><a href="data/MiniDrop/005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.report.txt"><code>005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.report.txt</code></a></li>
-<li><a href="data/MiniDrop/005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.sam"><code>005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.sam.txt"><code>005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.sam</code></a></li>
 </ul>
 <p><code>005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam.sam</code>
 (modified)</p>
@@ -1868,7 +1868,7 @@ detected when NUM_BASES or more consecutive A bases are found (default:
 <ul>
 <li><code>005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam</code></li>
 <li><a href="data/MiniDrop/005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.report.txt"><code>005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.report.txt</code></a></li>
-<li><a href="data/MiniDrop/005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.sam"><code>005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.sam.txt"><code>005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.sam</code></a></li>
 </ul>
 <p><code>005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam.sam</code></p>
 <pre class="text"><code>TEST.1  4  *  0  0  *  *  0  0  GAATGTCAAGAGGCGAACACACAACGTCTTGGAGCGCCAGAGGAGGAACGA III... XC:Z:AAT... RG:Z:A XM:Z:GGA...
@@ -1915,11 +1915,11 @@ reference genome.</p>
 <pre class="bash"><code>bash pg_006_01_star__________wREF.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
-<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Aligned.out.sam"><code>006_fastq/pg_006_01_tiny1.star_Aligned.out.sam</code></a></li>
-<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Log.final.out"><code>006_fastq/pg_006_01_tiny1.star_Log.final.out</code></a></li>
-<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Log.out"><code>006_fastq/pg_006_01_tiny1.star_Log.out</code></a></li>
-<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Log.progress.out"><code>006_fastq/pg_006_01_tiny1.star_Log.progress.out</code></a></li>
-<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_SJ.out.tab"><code>006_fastq/pg_006_01_tiny1.star_SJ.out.tab</code></a></li>
+<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Aligned.out.sam.txt"><code>006_fastq/pg_006_01_tiny1.star_Aligned.out.sam</code></a></li>
+<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Log.final.out.txt"><code>006_fastq/pg_006_01_tiny1.star_Log.final.out</code></a></li>
+<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Log.out.txt"><code>006_fastq/pg_006_01_tiny1.star_Log.out</code></a></li>
+<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_Log.progress.out.txt"><code>006_fastq/pg_006_01_tiny1.star_Log.progress.out</code></a></li>
+<li><a href="data/MiniDrop/006_fastq/pg_006_01_tiny1.star_SJ.out.tab.txt"><code>006_fastq/pg_006_01_tiny1.star_SJ.out.tab</code></a></li>
 </ul>
 <p><strong>Note:</strong> Tags such as <code>XC</code> (cell barcode)
 and <code>XM</code> (UMI) are <strong>not retained</strong> in the STAR
@@ -1988,7 +1988,7 @@ for later merging steps.</p>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>007_bam/pg_007_01_tiny1.aligned.sorted.bam</code></li>
-<li><a href="data/MiniDrop/007_bam/pg_007_01_tiny1.aligned.sorted.bam.sam"><code>007_bam/pg_007_01_tiny1.aligned.sorted.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/007_bam/pg_007_01_tiny1.aligned.sorted.bam.sam.txt"><code>007_bam/pg_007_01_tiny1.aligned.sorted.bam.sam</code></a></li>
 </ul>
 <p><strong>Note:</strong> Sorting only affects tag order; sequence
 content remains unchanged.</p>
@@ -2011,7 +2011,7 @@ that includes cell barcode (XC) and UMI (XM) tags.</p>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>007_bam/pg_007_02_tiny1.merged.bam</code></li>
-<li><a href="data/MiniDrop/007_bam/pg_007_02_tiny1.merged.bam.sam"><code>007_bam/pg_007_02_tiny1.merged.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/007_bam/pg_007_02_tiny1.merged.bam.sam.txt"><code>007_bam/pg_007_02_tiny1.merged.bam.sam</code></a></li>
 </ul>
 <p><strong>Merged SAM example
 (<code>007_bam/pg_007_02_tiny1.merged.bam.sam</code>):</strong></p>
@@ -2057,7 +2057,7 @@ such as exonic, intronic, intergenic, or untranslated region.</p>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam</code></li>
-<li><a href="data/MiniDrop/007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam.sam"><code>007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam.sam.txt"><code>007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam.sam</code></a></li>
 </ul>
 <p><code>007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam.sam</code></p>
 <pre class="text"><code>TEST.2 ... XC:Z:AAT... XF:Z:INTRONIC ... XM:Z:CCA... gf:Z:INTRONIC gn:Z:ENSG00000136997 gs:Z:+
@@ -2097,7 +2097,7 @@ which are often introduced by sequencing.</p>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>007_bam/pg_007_04_tiny1.clean_substitution.bam</code></li>
-<li><a href="data/MiniDrop/007_bam/pg_007_04_tiny1.clean_substitution.bam.sam"><code>007_bam/pg_007_04_tiny1.clean_substitution.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/007_bam/pg_007_04_tiny1.clean_substitution.bam.sam.txt"><code>007_bam/pg_007_04_tiny1.clean_substitution.bam.sam</code></a></li>
 <li><code>007_bam/tmp/</code></li>
 <li><a href="data/MiniDrop/pg_007_04_tiny1.clean_substitution.bam.report.txt"><code>007_bam/pg_007_04_tiny1.clean_substitution.bam.report.txt</code></a></li>
 </ul>
@@ -2121,7 +2121,7 @@ how they are corrected in the resulting BAM.</p>
 <ul>
 <li><code>007_bam/pg_007_05_tiny1.clean.bam</code></li>
 <li><code>007_bam/pg_007_05_tiny1.clean.bam.bai</code></li>
-<li><a href="data/MiniDrop/007_bam/pg_007_05_tiny1.clean.bam.sam"><code>007_bam/pg_007_05_tiny1.clean.bam.sam</code></a></li>
+<li><a href="data/MiniDrop/007_bam/pg_007_05_tiny1.clean.bam.sam.txt"><code>007_bam/pg_007_05_tiny1.clean.bam.sam</code></a></li>
 <li><a href="data/MiniDrop/007_bam/pg_007_05_tiny1.clean.bam.clean.indel_report.txt"><code>007_bam/pg_007_05_tiny1.clean.bam.clean.indel_report.txt</code></a></li>
 <li><a href="data/MiniDrop/007_bam/pg_007_05_tiny1.clean.bam.synthesis_stats.summary.txt"><code>007_bam/pg_007_05_tiny1.clean.bam.synthesis_stats.summary.txt</code></a></li>
 <li><a href="data/MiniDrop/007_bam/pg_007_05_tiny1.clean.bam.synthesis_stats.txt"><code>007_bam/pg_007_05_tiny1.clean.bam.synthesis_stats.txt</code></a></li>
