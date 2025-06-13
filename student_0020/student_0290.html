@@ -11,7 +11,7 @@
 
 <meta name="author" content="Keita Iida" />
 
-<meta name="date" content="2025-06-09" />
+<meta name="date" content="2025-06-13" />
 
 <title>Hands-on Tutorial: Processing Minimal scRNA-seq Data with Drop-seq Tools</title>
 
@@ -1482,7 +1482,7 @@ border-radius: 0px;
 <h1 class="title toc-ignore">Hands-on Tutorial: Processing Minimal
 scRNA-seq Data with Drop-seq Tools</h1>
 <h4 class="author">Keita Iida</h4>
-<h4 class="date">2025-06-09</h4>
+<h4 class="date">2025-06-13</h4>
 
 </div>
 
@@ -1622,6 +1622,8 @@ Execution</h1>
 <h2 class="unnumbered"><code>pg_004_01_create_fastq.sh</code></h2>
 <p>This script manually generates small FASTQ files based on reads
 extracted from <code>003_bam/tiny1.bam</code>.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_004_01_create_fastq.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>004_fastq/pg_004_01_tiny1_R1.fastq</code></li>
@@ -1689,6 +1691,8 @@ reflect any real transcript.</p>
 <h2 class="unnumbered"><code>pg_005_01_fastq2bam.sh</code></h2>
 <p>This script uses Drop-seq Tools to convert the paired-end FASTQ files
 (R1 and R2) into a single BAM file.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_01_fastq2bam.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>005_bam/pg_005_01_tiny1.bam</code></li>
@@ -1748,6 +1752,8 @@ interpret the bitwise flag values:</p>
 <h2 class="unnumbered"><code>pg_005_02_cellbarcode_tag.sh</code></h2>
 <p>This script uses Drop-seq Tools to add cell barcode (CB) tags to the
 BAM file.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_02_cellbarcode_tag.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>005_bam/pg_005_02_tiny1.cb.bam</code></li>
@@ -1784,6 +1790,8 @@ not recommended, as some tools rely on this default convention.</p>
 <h2 class="unnumbered"><code>pg_005_03_umi_tag.sh</code></h2>
 <p>This script uses Drop-seq tools to tag each read with its UMI (8 bp)
 sequence.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_03_umi_tag.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>005_bam/pg_005_03_tiny1.cb.umi.bam</code><br />
@@ -1809,6 +1817,8 @@ Renaming is possible, but not recommended.</p>
 <h2 class="unnumbered"><code>pg_005_04_read_qc.sh</code></h2>
 <p>This script filters out reads with low-quality cell barcodes
 (<code>XC</code>) using Drop-seq tools.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_04_read_qc.sh</code></pre>
 <p><strong>Output files:</strong> *
 <code>005_bam/pg_005_04_tiny1.cb.umi.qc.bam</code> *
 <code>005_bam/pg_005_04_tiny1.cb.umi.qc.bam.sam</code></p>
@@ -1824,6 +1834,8 @@ file.</p>
 <p>This script removes the SMART adapter sequence:
 <code>AAGCAGTGGTATCAACGCAGAGTGAATGGG</code> from the beginning of cDNA
 reads (5’).</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_05_remove_adapter.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>005_bam/pg_005_05_tiny1.cb.umi.qc.woAdapter.bam</code></li>
@@ -1851,6 +1863,8 @@ downstream alignment.</p>
 <p>This script trims polyA tails from the 3’ end of reads. The tail is
 detected when NUM_BASES or more consecutive A bases are found (default:
 6).</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_06_trim_polya.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>005_bam/pg_005_06_tiny1.cb.umi.qc.woAdapter.trimPolyA.bam</code></li>
@@ -1873,6 +1887,8 @@ trimmed:</p>
 <div id="pg_005_07_bam2fastq.sh" class="section level2 unnumbered">
 <h2 class="unnumbered"><code>pg_005_07_bam2fastq.sh</code></h2>
 <p>This script converts BAM to FASTQ using Drop-seq tools.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_005_07_bam2fastq.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq</code></li>
@@ -1896,6 +1912,8 @@ IIIIIIIIIIIIIIIIIIIII</code></pre>
 <h2 class="unnumbered"><code>pg_006_01_star__________wREF.sh</code></h2>
 <p>This script runs <strong>STAR</strong> to align reads to the
 reference genome.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_006_01_star__________wREF.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>006_fastq/pg_006_01_tiny1.star_Aligned.out.sam</code></li>
@@ -1966,6 +1984,8 @@ alignments, especially if it’s multi-mappable or contains soft-clipping
 <h2 class="unnumbered"><code>pg_007_01_sorting.sh</code></h2>
 <p>This script sorts BAM by query name using Picard’s SortSam, preparing
 for later merging steps.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_007_01_sorting.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>007_bam/pg_007_01_tiny1.aligned.sorted.bam</code></li>
@@ -1980,6 +2000,8 @@ content remains unchanged.</p>
 <p>This script uses Picard’s <code>MergeBamAlignment</code> to integrate
 STAR-aligned BAM (which lacks barcode tags) with the original BAM file
 that includes cell barcode (XC) and UMI (XM) tags.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_007_02_cb_umi__________wREF.sh</code></pre>
 <p><strong>Input files:</strong></p>
 <ul>
 <li>Aligned BAM:<br>
@@ -2031,6 +2053,8 @@ read with gene-related information: gene name (<code>GE</code>), gene ID
 (<code>GN</code>), and transcript region (<code>XF</code>:
 <code>exonic</code>/<code>intronic</code>/<code>intergenic</code>/<code>UTR</code>/etc.),
 such as exonic, intronic, intergenic, or untranslated region.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_007_03_genes__________wREF.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>007_bam/pg_007_03_tiny1.star_gene_exon_tagged.bam</code></li>
@@ -2069,6 +2093,8 @@ directionality of transcription and read orientation:
 <p>This script corrects single-nucleotide substitution errors in cell
 barcodes (e.g., changing <code>GTTAC</code> to <code>GTTTC</code>),
 which are often introduced by sequencing.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_007_04_fix_beads.sh</code></pre>
 <p><strong>Notes:</strong></p>
 <ul>
 <li>The corrected BAM file is almost identical to the input, except for
@@ -2083,6 +2109,8 @@ how they are corrected in the resulting BAM.</p>
 </div>
 <div id="pg_007_05_fix2nd_beads.sh" class="section level2 unnumbered">
 <h2 class="unnumbered"><code>pg_007_05_fix2nd_beads.sh</code></h2>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_007_05_fix2nd_beads.sh</code></pre>
 <p>This script corrects synthesis errors in cell barcodes, especially
 insertions and deletions (indels). These errors may result in clusters
 of nearly identical barcodes due to faulty oligo synthesis during bead
@@ -2102,6 +2130,8 @@ alignments.</p>
 <h2 class="unnumbered"><code>pg_008_01_counts.sh</code></h2>
 <p>This script counts the number of reads mapped to each gene for each
 cell.</p>
+<p><strong>Bash code</strong></p>
+<pre class="bash"><code>bash pg_008_01_counts.sh</code></pre>
 <p><strong>Output files:</strong></p>
 <ul>
 <li><code>008_count/pg_008_01_tiny1.txt.gz</code></li>
