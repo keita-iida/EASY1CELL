@@ -1,0 +1,6 @@
+@HD	VN:1.4
+@SQ	SN:8	LN:145138636
+@PG	ID:STAR	PN:STAR	VN:2.7.11b	CL:/home/keita/miniconda3/bin/STAR-avx2   --runThreadN 1   --genomeDir 001_data/001_reference/STAR_index_chr8_MYC_masked   --readFilesIn 006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq      --outFileNamePrefix 006_fastq/pg_006_01_tiny1.star_
+@CO	user command line: /home/keita/miniconda3/bin/STAR-avx2 --runThreadN 1 --genomeDir 001_data/001_reference/STAR_index_chr8_MYC_masked --readFilesIn 006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq --outFileNamePrefix 006_fastq/pg_006_01_tiny1.star_
+TEST.1	0	8	127740694	255	51M	*	0	0	GAATGTCAAGAGGCGAACACACAACGTCTTGGAGCGCCAGAGGAGGAACGA	IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII	NH:i:1	HI:i:1	AS:i:50	nM:i:0
+TEST.2	0	8	127740348	255	44M	*	0	0	TTTAATGTAACCTTGCTAAAGGAGTGATTTCTATTTCCTTTCTT	IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII	NH:i:1	HI:i:1	AS:i:43	nM:i:0

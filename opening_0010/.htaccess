@@ -1,0 +1,8 @@
+AuthType     Basic
+AuthName     "Authentication Sample"
+AuthUserFile /Users/black/Documents/003_20190410_001_LabDocs/Bioinformatics_TrainingCourse/bamrise/opening_0000/.htpasswd
+require valid-user
+
+<Files ~ "^\.ht">
+   deny from all
+</Files>

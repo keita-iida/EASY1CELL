@@ -1,0 +1,7 @@
+n <- 100
+set.seed(1)
+x <- rnorm(n)
+y <- rnorm(n)
+cols <- sample(c("red", "blue", "green", "yellow"), n, replace = TRUE)
+plot(x, y, pch = 16, col = cols, main = "Random Sparks", xlab = "X", ylab = "Y")
+

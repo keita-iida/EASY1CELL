@@ -1,0 +1,77 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2024-11-25T09:14:51+0000 :/opt/conda/conda-bld/star_1732525954305/work/source
+##### Command Line:
+/home/keita/miniconda3/bin/STAR-avx2 --runThreadN 1 --genomeDir 001_data/001_reference/STAR_index_chr8_MYC_masked --readFilesIn 006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq --outFileNamePrefix 006_fastq/pg_006_01_tiny1.star_
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 006_fastq/pg_006_01_tiny1.star_
+###### All USER parameters from Command Line:
+runThreadN                    1     ~RE-DEFINED
+genomeDir                     001_data/001_reference/STAR_index_chr8_MYC_masked     ~RE-DEFINED
+readFilesIn                   006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq        ~RE-DEFINED
+outFileNamePrefix             006_fastq/pg_006_01_tiny1.star_     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        1
+genomeDir                         001_data/001_reference/STAR_index_chr8_MYC_masked
+readFilesIn                       006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq   
+outFileNamePrefix                 006_fastq/pg_006_01_tiny1.star_
+
+-------------------------------
+##### Final effective command line:
+/home/keita/miniconda3/bin/STAR-avx2   --runThreadN 1   --genomeDir 001_data/001_reference/STAR_index_chr8_MYC_masked   --readFilesIn 006_fastq/pg_005_07_tiny1.cb.umi.qc.woAdapter.trimPolyA.fastq      --outFileNamePrefix 006_fastq/pg_006_01_tiny1.star_
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /home/keita/miniconda3/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 4   --genomeDir 001_data/001_reference/STAR_index_chr8_MYC_masked   --genomeFastaFiles 001_data/001_reference/chr8_MYC_masked.fa      --genomeSAindexNbases 10   --sjdbGTFfile 001_data/001_reference/myc.gtf   --sjdbOverhang 100
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              001_data/001_reference/chr8_MYC_masked.fa        ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  100     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   001_data/001_reference/myc.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               145230188   81819        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 1
+1	8	145138636	0
+--sjdbOverhang = 100 taken from the generated genome
+Started loading the genome: Tue Dec  2 14:21:11 2025
+
+Genome: size given as a parameter = 145230188
+SA: size given as a parameter = 81819
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=10  nSAi=1398100
+nGenome=145230188;  nSAbyte=81819
+GstrandBit=32   SA number of indices=19834
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 145230188 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 145230188 bytes
+SA file size: 81819 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 81819 bytes
+Loading SAindex ... done: 6116787 bytes
+Finished loading the genome: Tue Dec  2 14:21:12 2025
+
+Processing splice junctions database sjdbN=12,   pGe.sjdbOverhang=100 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Thread #0 end of input stream, nextChar=-1
+Completed: thread #0
+Dec 02 14:21:12 ..... finished mapping
+RAM after mapping:
+VmPeak:	  308324 kB; VmSize:	  308324 kB; VmHWM:	  253732 kB; VmRSS:	  253732 kB; 
+RAM after freeing genome index memory:
+VmPeak:	  308324 kB; VmSize:	  160520 kB; VmHWM:	  253732 kB; VmRSS:	  105996 kB; 
+ALL DONE!
